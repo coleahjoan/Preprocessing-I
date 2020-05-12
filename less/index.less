@@ -76,12 +76,12 @@ table {
 }
 
 html{
-	height: 100%;
+	/*height: 100%;
 	font-size:62.5%;
 	margin:4rem;
 	.border();
 	max-width:80%;
-	padding:2rem;
+	padding:2rem;*/
 }
 header{
 	display:flex;
@@ -90,13 +90,15 @@ header{
 
 	@media( max-width: 500px ) {
 		flex-direction: column;
-		align-items: center;
+		//align-items:center;//
 	  }// this closes the media query for the header
 	  
 	h1{
 		font-size:6rem;
 		font-family:@headingfont;
-		padding:1rem;
+		//padding:1rem;//
+		display:flex;
+		justify-content:center;
 	}//this closes h1//
 	h2{
 		justify-content:center;
@@ -111,8 +113,7 @@ header{
 		font-size:2rem;
 		font-family:@mainfont;
 		padding:1rem;
-		
-		@media( max-width: 500px ) {
+			@media( max-width: 500px ) {
 			flex-direction: column;
 			align-items: center;
 		  }// this closes the media query for the header
@@ -125,7 +126,7 @@ header{
 
 
 .profile{
-	border();
+	.border();
 	background-color:mistyrose;
 	padding:4rem;
 	max-width:100%;
