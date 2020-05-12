@@ -47,7 +47,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+//variables//
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Slabo+27px&display=swap');
 @main-color:mistyrose;
 @accent-color:dimgrey;
@@ -55,12 +55,20 @@ table {
 @headingfont: 'Nanum Gothic', sans-serif;
 @mainfont:'Slabo 27px', serif;
 
+
+//mixins//
 .border(){
 	border:2px dotted @accent-color;
 	padding:2%;
 }
-.border-bottom(){
-	border-bottom:2px solid @accent-color;
+.button(){
+	text-decoration:none;
+	color:black;		
+	background-color:@main-color;
+	border:2px solid @accent-color;
+	padding:1rem;
+	text-align:center;
+	border-radius:12px;
 }
 /* Set every element's box-sizing to border-box */
 * {
@@ -73,12 +81,18 @@ html{
 	margin:4rem;
 	.border();
 	max-width:80%;
+	padding:2rem;
 }
 header{
 	display:flex;
 	justify-content:center;
 	max-width:100%;
-	border-bottom:2px solid @accent-color;
+
+	@media( max-width: 500px ) {
+		flex-direction: column;
+		align-items: center;
+	  }// this closes the media query for the header
+	  
 	h1{
 		font-size:6rem;
 		font-family:@headingfont;
@@ -97,35 +111,50 @@ header{
 		font-size:2rem;
 		font-family:@mainfont;
 		padding:1rem;
+		
+		@media( max-width: 500px ) {
+			flex-direction: column;
+			align-items: center;
+		  }// this closes the media query for the header
 	a{
-		text-decoration:none;
-		color:black;
-		background-color:@main-color;
-		border:2px solid @accent-color;
-		padding:1rem;
-		text-align:center;
-		border-radius:12px;
-	}//this close a//
+		.button();
+	}//this closes a//
 	}//this closes the nav//
 }//this closes the header//
 
 
+
 .profile{
-	border-bottom:2px solid @accent-color;
+	border();
 	background-color:mistyrose;
-	padding:3rem;
+	padding:4rem;
 	max-width:100%;
-	font-family:@headingfont;
+	line-height:3rem;
+	font-size:1.5rem;
+	ul{
+		list-style-type: square;
+		padding-left:2rem;
+		text-transform: capitalize;
+	}//this closes the ul//
 	h3{
-		font-size:2.5rem;
+		font-size:2rem;
 		font-family:@headingfont;
-		p{
-			font-size:2.5rem;
-			font-family:@mainfont;
-		}//this closes the p//
+		border-bottom:1px dashed @second-accent-color;
+		margin-bottom:1rem;
+		margin-top:.5rem;
+	
+	p{
+		font-family:@mainfont;
+	}//this closes the p//
 	}//this closes h3//
 }//this closes the profile section//
 
-.button{
+footer{
+	display:flex;
+	justify-content:center;
+	margin:5rem;
+}//this closes the footer//
 
+contact{
+	.button();
 }

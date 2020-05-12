@@ -151,12 +151,12 @@ html {
   border: 2px dotted dimgrey;
   padding: 2%;
   max-width: 80%;
+  padding: 2rem;
 }
 header {
   display: flex;
   justify-content: center;
   max-width: 100%;
-  border-bottom: 2px solid dimgrey;
 }
 header h1 {
   font-size: 6rem;
@@ -187,17 +187,40 @@ header nav a {
   border-radius: 12px;
 }
 .profile {
-  border-bottom: 2px solid dimgrey;
+  border: 2px solid dimgrey;
   background-color: mistyrose;
-  padding: 3rem;
+  padding: 4rem;
   max-width: 100%;
-  font-family: 'Nanum Gothic', sans-serif;
+  line-height: 3rem;
+  font-size: 1.5rem;
+}
+.profile ul {
+  list-style-type: square;
+  padding-left: 2rem;
+  text-transform: capitalize;
 }
 .profile h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Nanum Gothic', sans-serif;
+  border-bottom: 1px dashed darkslategray;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 .profile h3 p {
-  font-size: 2.5rem;
   font-family: 'Slabo 27px', serif;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+}
+.button {
+  text-decoration: none;
+  color: black;
+  background-color: mistyrose;
+  border: 2px solid dimgrey;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 12px;
+  max-width: 20%;
 }
